@@ -67,5 +67,6 @@ c)  def bunnyEars(bunnies):              # bunnies = 4
 # 3) Check if floor f is equal to, greater than, or less than the middle floor.
 # 4) Depending on answer, repeat steps 1-3 with the relevant half of the list until floor f is found
 
-# Runtime complexity: O(1)                                               
+# Linked List runtime complexity: O(1)     
+# Array binary search runtime complexity: O(log(n))                                        
 ```
