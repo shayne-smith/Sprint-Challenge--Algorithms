@@ -99,22 +99,39 @@ class SortingRobot:
         # O(n^2) time | O(1) space
         # Bubble Sort
 
-        # loop through array, swapping any adjacent values where left is greater than right
+        # light on robot head indicates if list is sorted
+
         while not self.light_is_on():
-            self.set_light_on()
+            self.set_light_on() # assume list is sorted
+
+            # loop through array, swapping any adjacent values where left is greater than right
             while self.can_move_right():
+
+                # start with robot holding an item
                 self.swap_item()
+
+                # move right to compare held item with item next in list
                 self.move_right()
+
+                # if robot item is greater than item in list, swap values
                 if self.compare_item() == 1:
+
+                    # indicate that list is not sorted
                     self.set_light_off()
+
+                    # swap items
                     self.swap_item()
                     self.move_left()
                     self.swap_item()
                     self.move_right()
                 else:
+
+                    # move None value down list by 1
                     self.move_left()
                     self.swap_item()
                     self.move_right()
+
+            # reset robot position to first element in list
             while self.can_move_left():
                 self.move_left()
 
