@@ -1,7 +1,7 @@
 #### Please add your answers to the ***Analysis of  Algorithms*** exercises here.
 
 ## Exercise I
-
+```
 a)  a = 0
     n = 2                       # runs 2 times
     while (a < n * n * n):      # a < 8
@@ -60,6 +60,12 @@ c)  def bunnyEars(bunnies):              # bunnies = 4
 # A doubly-linked list is an appropriate data structure to store floor information because there is a tail and head
 # attribute. This allows us to access the tail node and set floor f to the tail node with O(1) runtime complexity. 
 # This proposed algorithm assumes floor 1 (ground level) is stored at the head node of the doubly-linked list.
+# If floor f is not at the top of the building and we're searching an array, we could use binary search to efficiently find floor f. 
+
+# 1) First, calculate the total number of floors
+# 2) Use floor division to divide by 2 to find the middle floor
+# 3) Check if floor f is equal to, greater than, or less than the middle floor.
+# 4) Depending on answer, repeat steps 1-3 with the relevant half of the list until floor f is found
 
 # Runtime complexity: O(1)                                               
-
+```
