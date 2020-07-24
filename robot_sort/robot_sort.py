@@ -99,28 +99,20 @@ class SortingRobot:
         # O(n^2) time | O(1) space
         # Bubble Sort
 
-        print(self._item)
-
         # loop through array, swapping any adjacent values where left is greater than right
         while not self.light_is_on():
             self.set_light_on()
             while self.can_move_right():
             # for i in range(len(array) - 1 - counter)
-                print(self._item) # None
                 self.swap_item() # robot holding 10, None in first position
-                print(self._item) # 7
                 self.move_right() # move to position 2
                 if self.compare_item() == 1: # robot item greater than item in front of robot
-                    print("greater than")
                     self.set_light_off()
                     self.swap_item()
-                    print(self._item) # 2
                     self.move_left()
                     self.swap_item()
-                    print(self._item) # None
                     self.move_right()
                 else:
-                    print("less than")
                     self.move_left()
                     self.swap_item()
                     self.move_right()
