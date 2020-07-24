@@ -103,10 +103,9 @@ class SortingRobot:
         while not self.light_is_on():
             self.set_light_on()
             while self.can_move_right():
-            # for i in range(len(array) - 1 - counter)
-                self.swap_item() # robot holding 10, None in first position
-                self.move_right() # move to position 2
-                if self.compare_item() == 1: # robot item greater than item in front of robot
+                self.swap_item()
+                self.move_right()
+                if self.compare_item() == 1:
                     self.set_light_off()
                     self.swap_item()
                     self.move_left()
@@ -117,9 +116,6 @@ class SortingRobot:
                     self.swap_item()
                     self.move_right()
             while self.can_move_left():
-                # if self.compare_item() == -1:
-                #     self.set_light_off
-                #     self.swap_item()
                 self.move_left()
 
 
